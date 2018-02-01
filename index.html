@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project A</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/ethers.js"   type="text/javascript"></script>
+	<script src="./js/web3.js"   type="text/javascript"></script>
+	<script src="./js/ethereumjs-tx-1.3.3.js"   type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<h2>Home</h2>
+	<div id='wrapper'>
+		<button id='btn-wallet' type="button" class="btn btn-primary">Create Wallet</button>
+		<button id="btn-balance" type="button" class="btn btn-primary">Check Balance</button>
+		<button id="btn-address" type="button" class="btn btn-primary">Get Address</button>
+		<button id="btn-transact" type="button" class="btn btn-primary">Transact</button>
+	</div>
+
+	<div id='wallet' class='secondary-container' style='display:none'>
+		<h2>Wallet</h2>
+		<div class="well">Private Key: <label id='lbl-private-key'>---</label></div>
+		<div class="well">Public Key: <label id='lbl-public-key'>---</label></div>
+	</div>
+
+	<div id='balance' class='secondary-container' style='display:none'>
+		<h2>Balance</h2>
+		<label>Private Key: <input id='ip-private-key-bal'></input></label>
+		<button id="btn-submit-getbal" type="button" class="btn btn-primary">Submit</button>
+		<div class="well" style="display:none">Balance: <label id='lbl-balance'>---</label></div>
+	</div>
+
+	<div id='address' class='secondary-container' style='display:none'>
+		<h2>Address</h2>
+		<label>Private Key: <input id='ip-private-key-addr'></input></label>
+		<button id="btn-submit-getaddr" type="button" class="btn btn-primary">Submit</button>
+		<div class="well" style="display:none">Address: <label id='lbl-address'>---</label></div>
+	</div>
+
+	<div id='transact' class='secondary-container' style='display:none'>
+		<h2>Address</h2>
+		<label>Private Key: <input id='ip-private-key-transact'></input></label>
+		<label>Recipient Address: <input id='ip-address-transact'></input></label>
+		<label>Amount (in ETC): <input id='ip-amount-transact'></input></label>
+		<button id="btn-submit-transact" type="button" class="btn btn-primary">Submit</button>
+		<div class="well" style="display:none">Result: <label id='lbl-transact-status'>---</label></div>
+	</div>
+
+	</div>
+</div>
+
+</body>
+</html>
